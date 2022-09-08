@@ -1,16 +1,17 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//ЩОБ ОБРАТИ ВІДПОВІДНУ ПРОГРАМУ ЗМІНІТЬ У НАЗВІ main НА Main !
 
-namespace Lab11
+
+
+namespace Lab1
 {
     internal class Program
     {
-        static void main(string[] args) 
+        static void main1() 
         {
             Console.Write("Input X1: ");
             int X1 = int.Parse(Console.ReadLine());
@@ -27,39 +28,24 @@ namespace Lab11
             double D = Math.Sqrt(Math.Pow((X2 - X1), 2) + Math.Pow((Y2 - Y1), 2));
             Console.WriteLine("Distance between dots is: " + D);
 
-            Console.ReadLine();
         }
-    }
-}
 
-namespace Lab12
-{
-    internal class Program
-    {
-        static void main(string[] args)
+        static void main2()
         {
             Console.Write("Input X: ");
             int X = int.Parse(Console.ReadLine());
 
-            if ( X%2 == 0)
+            if (X % 2 == 0)
             {
                 Console.Write("Number is EVEN");
-            }   
+            }
             else
             {
                 Console.Write("Number is ODD");
             }
 
-            Console.ReadLine();
         }
-    }
-}
-
-namespace Lab13
-{
-    internal class Program
-    {
-        static void main(string[] args)
+        static void main3()
         {
             Console.Write("Input X: ");
             int X = int.Parse(Console.ReadLine());
@@ -70,14 +56,14 @@ namespace Lab13
             int R = 10;
             int r = 5;
 
-            if (Y < 0) 
+            if (Y < 0)
             {
                 Console.Write("Dot OUT the area");
                 Console.ReadLine();
                 return;
             }
             else
-            if (Math.Pow(X, 2) + Math.Pow(Y, 2) == Math.Pow(R, 2) || Math.Pow(X,2) + Math.Pow(Y,2) == Math.Pow(r,2))
+            if (Math.Pow(X, 2) + Math.Pow(Y, 2) == Math.Pow(R, 2) || Math.Pow(X, 2) + Math.Pow(Y, 2) == Math.Pow(r, 2))
             {
                 Console.Write("Dot on the LINE");
             }
@@ -91,18 +77,11 @@ namespace Lab13
             {
                 Console.Write("Dot OUT the area");
             }
-            
 
-            Console.ReadLine();
+
         }
-    }
-}
 
-namespace Lab14
-{
-    internal class Program
-    {
-        static void main(string[] args)
+        static void main4()
         {
             int m = 0;
             while (m < 1 || m > 4)
@@ -111,54 +90,48 @@ namespace Lab14
                 m = int.Parse(Console.ReadLine());
             }
 
-            switch (m) {
-                case 1: Console.Write("m is - Pika.");
+            switch (m)
+            {
+                case 1:
+                    Console.Write("m is - Pika.");
                     break;
-                case 2: Console.Write("m is - Trefi");
+                case 2:
+                    Console.Write("m is - Trefi");
                     break;
-                case 3: Console.Write("m is - Bubni");
+                case 3:
+                    Console.Write("m is - Bubni");
                     break;
-                case 4: Console.Write("m is - Chirva");
+                case 4:
+                    Console.Write("m is - Chirva");
                     break;
-                default: Console.Write("Something gone wrong"); 
+                default:
+                    Console.Write("Something gone wrong");
                     break;
             }
 
-            Console.ReadLine();
         }
-    }
-}
 
-namespace Lab15
-{
-    internal class Program
-    {
-        static int dobutok(int a, int b)
+        static void main5()
         {
-            return a * b;
+            int dobutok(int a, int b)
+            {
+                return a * b;
 
-        }
-        static void main(string[] args)
-        {
+            }
+
             Console.Write("Input X: ");
             int X = int.Parse(Console.ReadLine());
 
             Console.Write("Input Y: ");
             int Y = int.Parse(Console.ReadLine());
-            
+
             int result = dobutok(X, Y);
 
             Console.WriteLine("Result is: " + result);
-            Console.ReadLine();
-        }
-    }
-}
 
-namespace Lab16
-{
-    internal class Program
-    {
-        static void main(string[] args)
+        }
+
+        static void main6()
         {
             Console.Write("Input N: ");
             int N = int.Parse(Console.ReadLine());
@@ -167,10 +140,24 @@ namespace Lab16
             int M = int.Parse(Console.ReadLine());
 
             double result = 0;
-            result = ((N + 1) / (Math.Pow(N, 2) + Math.Pow(M, 2) + 1)) - ((1) / ((M+1)*(N+1)));
+            result = ((N + 1) / (Math.Pow(N, 2) + Math.Pow(M, 2) + 1)) - ((1) / ((M + 1) * (N + 1)));
             Console.WriteLine("Result is: " + result);
 
-            Console.ReadLine();
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("1.");
+            main1();
+            Console.WriteLine("2.");
+            main2();
+            Console.WriteLine("3.");
+            main3();
+            Console.WriteLine("4.");
+            main4();
+            Console.WriteLine("5.");
+            main5();
+            Console.WriteLine("6.");
+            main6();
         }
     }
 }
